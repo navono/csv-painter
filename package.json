@@ -2,17 +2,27 @@
   "name": "csv-painter",
   "version": "0.0.1",
   "description": "",
-  "main": "main.js",
+  "main": "src/electron-starter.js",
   "scripts": {
-    "start": "electron ."
+    "dev": "nf start -p 3000",
+    "electron": "electron .",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "keywords": [
-    "Elector",
-    "csv"
+    "Electron",
+    "csv",
+    "react"
   ],
   "author": "Qixing Ping",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^1.7.9"
+    "@heroku/foreman": "^2.0.2",
+    "electron": "^1.7.9",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-scripts": "^1.0.17"
   }
 }
