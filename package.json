@@ -10,7 +10,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.jsx": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "keywords": [
     "Electron",
@@ -22,8 +33,12 @@
   "devDependencies": {
     "@heroku/foreman": "^2.0.2",
     "electron": "^1.7.9",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.8.2",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-scripts": "^1.0.17"
+    "react-scripts": "^1.0.17",
+    "rimraf": "^2.6.2"
   }
 }
